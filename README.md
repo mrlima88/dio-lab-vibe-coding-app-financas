@@ -1,4 +1,4 @@
-# 💸 App de Organização de Finanças Pessoais com Vibe Coding
+# 💸 App quiz interativo sobre Scrum, com Vibe Coding
 
 Aprenda a **criar soluções com IA** de forma criativa, guiando ferramentas como o **Copilot** e o **Lovable** com uma comunicação simples e natural. O foco é desenvolver o conceito de um **App de Organização de Finanças Pessoais**, mas, acima de tudo, aprender o **jeito Vibe de programar com IA**.
 
@@ -26,27 +26,32 @@ Antes de pedir para a IA "criar um app", é importante definir com clareza o que
 Um bom PRD deve descrever o problema, quem será beneficiado, as principais funcionalidades e o que você espera que a IA entregue. Use o modelo abaixo como ponto de partida e adapte conforme o seu estilo:
 
 ```txt
-# Contexto
-Quero criar um aplicativo de Organização de Finanças Pessoais que funcione por meio de conversas com o usuário.  
-A ideia é facilitar o controle financeiro de forma simples e natural, sem formulários manuais ou planilhas complexas.
+Contexto
+Criar um aplicativo de quiz sobre Scrum, com perguntas de múltipla escolha (4 alternativas). O sistema deve permitir que usuários se cadastrem, respondam às questões e sejam ranqueados conforme acertam, promovendo aprendizado gamificado e competitivo.
 
-# Problema
-Muitas pessoas desistem de controlar seus gastos porque os apps atuais exigem muita entrada manual e pouca personalização.  
-Quero resolver isso com uma experiência de conversa e recomendações automáticas de economia.
+Problema
+Os simulados e materiais de estudo tradicionais são maçantes e pouco interativos, o que desmotiva os candidatos que querem se preparar para certificações Scrum. Falta uma forma mais dinâmica e divertida de praticar os conteúdos.
 
-# Público-Alvo
-Pessoas que querem começar a organizar suas finanças de forma prática e sem complicação, principalmente iniciantes.
+Público-Alvo
+• 	Profissionais que desejam aperfeiçoar suas habilidades em Scrum.
+• 	Estudantes e candidatos que estão se preparando para certificações oficiais (PSM, CSM, etc.).
+• 	Qualquer pessoa interessada em aprender Scrum de forma prática e engajante.
 
-# Funcionalidades-Chave
-1. Registrar gastos via chat em linguagem natural.  
-2. Classificar automaticamente as transações.  
-3. Definir e acompanhar metas financeiras.  
-4. Receber dicas de economia do “Agente Financeiro”.  
-5. Visualizar relatórios simples e personalizados.
+Funcionalidades-Chave
+• 	Cadastro/Login de usuários com nome e sobrenome.
+• 	Banco inicial de 20 perguntas sobre Scrum, com 4 alternativas e apenas 1 correta.
+• 	Sistema de pontuação: cada resposta correta soma pontos definidos pelo administrador.
+• 	Ranking em tempo real dos usuários com maior pontuação.
+• 	Interface administrativa com:
+• 	CRUD de perguntas (criar, editar, excluir).
+• 	Gestão de usuários.
+• 	Interação com IA em linguagem natural para:
+• 	Criar novas perguntas automaticamente.
+• 	Gerar questões a partir de links indicados.
+• 	Solicitar diretamente no chat a criação de perguntas.
+• 	Feedback imediato após cada resposta (correto/incorreto).
+• 	Expansão futura: possibilidade de incluir novos módulos de estudo ou diferentes níveis de dificuldade.
 
-# Entregável da IA
-Gerar um plano de MVP com as principais telas, recursos necessários e um esboço de validação inicial.  
-Usar tom educativo e linguagem acessível, em português.
 ```
 
 Depois de preencher o modelo, use o Copilot Web para revisar e melhorar o seu prompt antes de ir ao Lovable. A ideia é lapidar o texto até que ele fique claro, direto e reflita exatamente a sua intenção.
@@ -73,14 +78,80 @@ Durante essa etapa, você pode orientar a IA para três entregas principais:
 Finalize seu projeto criando um **repositório no GitHub** (pode ser um **fork** deste).  
 No README do seu repositório, inclua:
 
-- Seu **prompt final** (PRD);  
-- Prints ou pequenos vídeos das interações com a IA;  
-- Um resumo do que o seu **App de Finanças Pessoais** faz;  
-- Uma breve **reflexão sobre o processo**:
-  - O que funcionou bem?  
-  - O que não funcionou como o esperado?  
-  - O que aprendeu sobre conversar com IAs?
+- Seu **prompt final** (PRD);
+Após conversar com o copilot solicitei que ele criace um prompt + PRD completo + as 20 perguntas iniciais.
 
+Vou colocar aqui a forma de texto apenas.
+
+🚀 Prompt para Lovable
+Prompt:
+“Criar um aplicativo de quiz sobre Scrum com cadastro/login de usuários, banco inicial de 20 perguntas, sistema de pontuação, 
+ranking em tempo real e painel administrativo com interação via IA em linguagem natural. As perguntas iniciais já estão incluídas abaixo.”
+
+PRD Final – Quiz Scrum App
+Contexto
+Criar um aplicativo de quiz sobre Scrum, com perguntas de múltipla escolha (4 alternativas). O sistema deve permitir que usuários se cadastrem, respondam às questões e sejam ranqueados conforme acertam, promovendo aprendizado gamificado e competitivo.
+Problema
+Os simulados e materiais de estudo tradicionais são maçantes e pouco interativos, o que desmotiva os candidatos que querem se preparar para certificações Scrum.
+Público-Alvo
+- Profissionais que desejam aperfeiçoar suas habilidades em Scrum.
+- Estudantes e candidatos que estão se preparando para certificações oficiais (PSM, CSM, etc.).
+- Qualquer pessoa interessada em aprender Scrum de forma prática e engajante.
+Funcionalidades-Chave
+- Cadastro/Login de usuários com nome e sobrenome.
+- Banco inicial de 20 perguntas sobre Scrum, com 4 alternativas e apenas 1 correta.
+- Sistema de pontuação: cada resposta correta soma pontos definidos pelo administrador.
+- Ranking em tempo real dos usuários com maior pontuação.
+- Interface administrativa com CRUD de perguntas e gestão de usuários.
+- Interação com IA em linguagem natural para criar novas perguntas, gerar questões a partir de links e solicitar diretamente no chat.
+- Feedback imediato após cada resposta.
+- Expansão futura para novos módulos e níveis de dificuldade.
+Requisitos Funcionais
+- Perguntas com 4 alternativas e apenas 1 correta.
+- Usuário só pode responder cada pergunta uma vez.
+- Ranking atualizado automaticamente.
+- Administrador pode adicionar novas perguntas manualmente ou via IA.
+- IA deve aceitar comandos como:
+- “Adicione 5 perguntas sobre Daily Scrum.”
+- “Crie questões baseadas neste link [URL].”
+- “Simplifique as perguntas para nível iniciante.”
+Requisitos Não Funcionais
+- Performance: respostas e ranking devem ser atualizados em tempo real.
+- Segurança: autenticação básica para usuários e administrador.
+- Escalabilidade: permitir expansão do banco de perguntas.
+- Usabilidade: interface intuitiva, acessível em dispositivos móveis e desktop.
+Critérios de Aceitação
+- Usuário consegue se cadastrar e responder às 20 perguntas iniciais.
+- Ranking mostra corretamente os usuários com maior pontuação.
+- Administrador consegue adicionar novas perguntas via interface ou IA.
+- Sistema atribui pontuação correta e atualiza ranking automaticamente.
+Dependências
+- Plataforma Lovable para desenvolvimento sem código.
+- Banco de dados para armazenar usuários, perguntas e pontuações.
+- Módulo de IA/NLP para interação em linguagem natural e geração de perguntas.
+Priorização
+- Cadastro/Login de usuários.
+- Banco inicial de 20 perguntas sobre Scrum.
+- Sistema de pontuação e ranking.
+- Interface administrativa.
+- Interação com IA para criação e gestão de perguntas.
+
+
+  ------------O que funcionou bem?--------
+  - O Quiz com as perguntas e ranking que são o coração do app estão funcionando muito bem.
+    
+  - ----------O que não funcionou como o esperado?------
+  -  Na primeira vez que mandei o comando ele não criou a pagina do adm, porém logo que terminou de executar me deu opção de criar essa parte que faltava.
+  -  
+    -----------O que aprendeu sobre conversar com IAs?--------
+  -  Está sendo uma experiencia maravilhosa, tando que tive um problema e precisei resolver
+  -  Por algum motivo minha senha parou de funcionar, como eu não tinha inserido uma função para quem esquece a senha precisei pedir a Lovable e ele em seguida já criou.
+        INteração com a lovable chat   [=Inclua uma opção para pode redefinir a senha quando o usuário a esquece
+ Vou adicionar a funcionalidade de redefinição de senha.
+Vou adicionar a funcionalidade de redefinição de senha.
+Add forgot/reset password flow
+Pronto! Agora na tela de login há o link "Esqueceu a senha?" que envia um e-mail de redefinição, e a página /reset-password permite ao usuário definir uma nova senha.
+]
 > [!TIP]
 > Publique seu repositório e compartilhe o link na plataforma da DIO! Sua entrega é a prova de que você domina o raciocínio de Vibe Coding, mesmo sem escrever uma única linha de código.
 
